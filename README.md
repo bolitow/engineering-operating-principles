@@ -2,7 +2,7 @@
 
 **A practical operating guide for autonomous AI coding agents.**
 
-A reusable `AGENTS.md` designed to help coding agents act like thoughtful engineering collaborators: inspect before changing, challenge assumptions, keep changes scoped, test claims, and communicate risks.
+A reusable `AGENTS.md` for individual maintainers, teams, and multi-team organizations. It helps coding agents act like thoughtful engineering collaborators: inspect before changing, challenge assumptions, keep changes scoped, test claims, and communicate risks.
 
 ## Why this exists
 
@@ -18,6 +18,16 @@ These principles provide a starting point—not a substitute for project documen
 4. Enforce permissions and CI outside the prompt.
 
 For a lightweight project-specific supplement, see [examples/project-agents.md](./examples/project-agents.md). For a reusable task brief, see [examples/task-instructions.md](./examples/task-instructions.md).
+
+## Adapting this to your organization
+
+Whether working as an individual maintainer, a team, or multiple teams across one or several technology stacks, keep the common principles here and put commands, invariants, ownership, and approval rules in each project's supplement. Assign accountable owners and qualified independent reviewers according to the project's risk and approval requirements, not a fixed headcount. Start with one real task; use its existing issue or pull request to record assumptions, evidence, and review outcomes. A separate process document is optional.
+
+When independent human review is required, an individual maintainer may need an external qualified reviewer. An unavailable reviewer does not remove the approval requirement.
+
+The working loop is: define the outcome and invariants, inspect evidence, test an explicit hypothesis when uncertainty warrants it using the smallest useful change, then review the result and record what remains unknown. Use deeper independent review for consequential changes; routine edits need no standing review committee.
+
+Keep Git and existing pre-merge checks. Changes to engineering infrastructure need a measured local problem, a bounded experiment, and human agreement—not another organization's scale as justification. See [sources and adaptation](./docs/sources-and-adaptation.md) for the distinction between source findings, analogies, and our recommendations.
 
 ## Operating modes
 
@@ -39,6 +49,8 @@ This repository is agent-agnostic. Support for `AGENTS.md` and instruction prece
 ## Contributing
 
 Issues and pull requests are welcome. Propose changes with a concrete problem, examples, and trade-offs. Keep guidance actionable and proportional.
+
+Use English for this repository's canonical guide, documentation, examples, commit messages, and pull requests. Projects adopting the guide may choose their own language conventions.
 
 ## License
 
