@@ -19,6 +19,14 @@ These principles provide a starting point—not a substitute for project documen
 
 For a lightweight project-specific supplement, see [examples/project-agents.md](./examples/project-agents.md). For a reusable task brief, see [examples/task-instructions.md](./examples/task-instructions.md).
 
+## Using this with a small team
+
+For two developers working across projects and technology stacks, keep the common principles here and put commands, invariants, ownership, and approval rules in each project's supplement. Start with one real task; use its existing issue or pull request to record assumptions, evidence, and review outcomes. A separate process document is optional.
+
+The working loop is: define the outcome and invariants, inspect evidence, test an explicit hypothesis with the smallest useful change, then review the result and record what remains unknown. Use deeper independent review for consequential changes; routine edits need no standing review committee.
+
+Keep Git and existing pre-merge checks. Changes to engineering infrastructure need a measured local problem, a bounded experiment, and human agreement—not another organization's scale as justification. See [sources and adaptation](./docs/sources-and-adaptation.md) for the distinction between source findings, analogies, and our recommendations.
+
 ## Operating modes
 
 | Mode | When to use |

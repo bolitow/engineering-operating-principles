@@ -6,7 +6,8 @@
 - Purpose: [What the application does]
 - Stack: [Languages, frameworks, runtime]
 - Architecture: [Key modules and boundaries]
-- Owners: [Team or code owners]
+- Owners: [Primary developer, second reviewer, and escalation when unavailable]
+- Related projects: [Shared contracts and affected consumers; omit if none]
 
 ## Development commands
 - Install: `[command]`
@@ -14,9 +15,18 @@
 - Test: `[command]`
 - Build: `[command]`
 
-## Invariants
-- [Data and security boundary that must never be crossed]
-- [Domain behavior that must remain stable]
+## Invariants and verification
+List only important properties. These examples are illustrative, not requirements for every project.
+
+| Property | Owning boundary | Verification and counterexample |
+| --- | --- | --- |
+| [A retry does not create a second payment] | [Payment service] | [Repeat the request with the same key; reject duplicate records] |
+| [A tenant cannot read another tenant's data] | [Authorization and storage] | [Cross-tenant integration request must fail] |
+
+- Hermetic checks: [Commands and controlled clock, seed, fixtures, or dependencies]
+- Integration checks: [Real boundaries, required environment, and remaining gaps]
+- Required pre-merge / pre-deploy checks: [Keep existing controls explicit]
+- Shared-contract verification: [Consumer versions, checks, and responsible developer]
 
 ## Approval boundaries
 - Agent may autonomously: [Low-risk scoped changes]
@@ -26,5 +36,11 @@
 - [Relevant tests and checks pass]
 - [Diff reviewed]
 - [Risks and unverified areas disclosed]
+- [Required independent review completed; pending review means not ready for merge]
 
-Read the root `AGENTS.md` for general principles. This supplement provides project-specific context; neither document overrides enforced permissions.
+## Evidence and experiments
+- Record location: [Existing issue, PR, or decision log; avoid a duplicate ledger]
+- Repeatability: [Revision, environment, fixture or input, command, and result]
+- Current delivery bottleneck: [Measured stage, baseline, or explicitly unknown]
+
+Keep local facts in this supplement and general investigation and review rules in the root `AGENTS.md`; neither document overrides enforced permissions.
