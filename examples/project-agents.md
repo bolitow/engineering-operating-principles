@@ -6,7 +6,7 @@
 - Purpose: [What the application does]
 - Stack: [Languages, frameworks, runtime]
 - Architecture: [Key modules and boundaries]
-- Owners: [Primary developer, second reviewer, and escalation when unavailable]
+- Owners: [Accountable maintainer or team, required independent reviewers, and escalation when unavailable]
 - Related projects: [Shared contracts and affected consumers; omit if none]
 
 ## Development commands
@@ -26,7 +26,7 @@ List only important properties. These examples are illustrative, not requirement
 - Hermetic checks: [Commands and controlled clock, seed, fixtures, or dependencies]
 - Integration checks: [Real boundaries, required environment, and remaining gaps]
 - Required pre-merge / pre-deploy checks: [Keep existing controls explicit]
-- Shared-contract verification: [Consumer versions, checks, and responsible developer]
+- Shared-contract verification: [Consumer versions, checks, and accountable owner]
 
 ## Approval boundaries
 - Agent may autonomously: [Low-risk scoped changes]

@@ -29,7 +29,7 @@
 For a straightforward edit, omit this section instead of inventing an experiment.
 
 ## Review
-[Review intent and evidence, then risk-sensitive implementation details. Name the second developer when independent human review is required; record pending review explicitly.]
+[Review intent and evidence, then risk-sensitive implementation details. Identify the qualified independent human reviewers required by project policy; record pending review explicitly.]
 
 ## Risk and approval gates
 [Decisions requiring human approval.]
